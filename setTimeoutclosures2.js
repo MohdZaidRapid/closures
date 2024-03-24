@@ -21,20 +21,39 @@
 
 // // data hiding and encapsulation example
 
+// function counter() {
+//   var count = 0;
+
+//   function incrementCounter() {
+//     count++;
+//     console.log(count);
+//   }
+//   return incrementCounter;
+// }
+
+// var counter1 = counter();
+// counter1();
+// counter1();
+// counter1();
+
+// var counter2 = counter();
+// counter2();
+
 function counter() {
   var count = 0;
 
-  function incrementCounter() {
+  this.incrementCounter = function () {
     count++;
     console.log(count);
-  }
-  return incrementCounter;
+  };
+  this.decrementCounter = function () {
+    count--;
+    console.log(count);
+  };
 }
 
-var counter1 = counter();
-counter1();
-counter1();
-counter1();
-
-var counter2 = counter();
-counter2();
+var counter1 = new counter();
+counter1.incrementCounter();
+counter1.incrementCounter();
+counter1.incrementCounter();
+counter1.decrementCounter();
