@@ -1,6 +1,6 @@
 var x = 1;
 a();
-b(); 
+b();
 console.log(x);
 
 function a() {
