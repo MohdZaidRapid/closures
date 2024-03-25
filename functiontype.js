@@ -32,3 +32,10 @@ var c = function (param1, param2) {
 c(1, 2);
 
 // first class function
+var d = function (param1) {
+  return function () {
+    console.log(param1);
+  };
+};
+
+console.log(d().toString());
