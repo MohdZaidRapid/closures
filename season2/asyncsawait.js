@@ -14,25 +14,31 @@
 //   return p;
 // }
 
-const p = new Promise((res, rej) => {
-  setTimeout(() => {
-    res("Promise resolved value !!");
-  }, 10000);
-});
+// const p1 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("Promise resolved value !!");
+//   }, 5000);
+// });
 
-async function handlePromise() {
-  // our js engine was waiting for resolved
-  console.log("top");
-  const val = await p;
-  console.log("hello zaid");
-  console.log(val);
+// const p2 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("Promise resolved value !!");
+//   }, 10000);
+// });
 
-  const val2 = await p;
-  console.log("hello zaid 1");
-  console.log(val2);
-}
+// async function handlePromise() {
+//   // our JS Engine was waiting for resolved
+//   console.log("top");
+//   const val = await p1;
+//   console.log("hello zaid");
+//   console.log(val);
 
-handlePromise();
+//   const val2 = await p2;
+//   console.log("hello zaid 1");
+//   console.log(val2);
+// }
+
+// handlePromise();
 
 // console.log("pokemon");
 
@@ -47,3 +53,16 @@ handlePromise();
 // }
 
 // getData();
+const API_URL = "https://api.github.com/users/mohdzaid123";
+
+async function handlePromise() {
+  const data = await fetch(API_URL);
+
+  const jsonValue = await data.json();
+
+  console.log(jsonValue);
+
+  // fetch function()=>Response.json() =>jsonValue
+}
+
+handlePromise();
