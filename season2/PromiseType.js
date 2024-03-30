@@ -69,12 +69,12 @@ const p2 = new Promise((resolve, reject) => {
   //   }, 1000);
   setTimeout(() => {
     reject("P2 success");
-  }, 9000);
+  }, 5000);
 });
 const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("P3 success");
-  }, 20000);
+    reject("P3 success");
+  }, 2000);
 });
 
 // Promise.race
@@ -92,5 +92,5 @@ Promise.any([p1, p2, p3])
     console.log(res);
   })
   .catch((err) => {
-    console.log(err);
+    console.log(err.errors);
   });
