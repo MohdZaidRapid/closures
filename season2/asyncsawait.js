@@ -56,13 +56,15 @@
 const API_URL = "https://api.github.com/users/mohdzaid123";
 
 async function handlePromise() {
-  const data = await fetch(API_URL);
+  try {
+    const data = await fetch(API_URL);
+    const jsonValue = await data.json();
 
-  const jsonValue = await data.json();
-
-  console.log(jsonValue);
+    console.log(jsonValue);
+  } catch (error) {
+    console.log(error);
+  }
 
   // fetch function()=>Response.json() =>jsonValue
 }
-
-handlePromise();
+handlePromise().catch((err) => console.log(err));
