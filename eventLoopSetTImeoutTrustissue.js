@@ -4,6 +4,7 @@ setTimeout(function cb() {
   console.log("Callback");
 }, 0);
 
+// kjkjkjk
 console.log("End");
 // million lines of code
 
