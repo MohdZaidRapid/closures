@@ -10,7 +10,7 @@
 //   console.log("y");
 // });
 
-// Javascript is single  threaded and sync language
+// Javascript is single  threaded and synchrounous language 
 
 function attachEventListener() {
   console.log("hello");
