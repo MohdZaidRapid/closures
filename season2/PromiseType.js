@@ -1,5 +1,5 @@
 // Promise.all()
-
+// Promise Constructor
 // const p1 = new Promise((resolve, reject) => {
 //   setTimeout(() => {
 //     resolve("P1 success");
